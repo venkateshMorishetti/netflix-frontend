@@ -9,4 +9,7 @@ steps:
         1) we need to install react-router-dom package
         2) we need to define routes using createBrowserRouter() in landing component
         3) provide the defined routes to react app using <RouterProvider router={routes}>
+included firebase to app
+deployed app to firebase and made it available
+
  
