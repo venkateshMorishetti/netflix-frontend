@@ -11,5 +11,7 @@ steps:
         3) provide the defined routes to react app using <RouterProvider router={routes}>
 included firebase to app
 deployed app to firebase and made it available
+created the redux store for user info
+
 
  
