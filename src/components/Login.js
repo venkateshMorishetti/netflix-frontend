@@ -4,6 +4,7 @@ import {validateEmailAndPassword, validateSignUpFormParams} from "../utility/val
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import {auth} from "../utility/firebase";
 import { useNavigate } from "react-router-dom";
+import {loginPageBackground} from "../utility/CONSTATNS";
 const Login = () => {
     const navigate = useNavigate();
     const [isSiginInForm, setIsSingInForm] = useState(true);
@@ -59,7 +60,7 @@ const Login = () => {
         <div>
             <Header />
             <div className="absolute">
-                <img src="https://assets.nflxext.com/ffe/siteui/vlv3/77d35039-751f-4c3e-9c8d-1240c1ca6188/cf244808-d722-428f-80a9-052acdf158ec/IN-en-20231106-popsignuptwoweeks-perspective_alpha_website_small.jpg" alt="netflix login background" />
+                <img src={loginPageBackground} alt="netflix login background" />
             </div>
             <form onSubmit={(e)=> e.preventDefault()}  className="absolute bg-black  w-2/6 my-36 py-12 px-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80">
                 <h1 className="text-4xl font-bold py-4">{isSiginInForm ? "Sign In" : "Sign Up"}</h1>
