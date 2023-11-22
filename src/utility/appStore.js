@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
+import moviesSlice from "./moviesSlice";
 import  userReducer  from "./userSlice";
 
 const appstore = configureStore({
     reducer:{
-        user: userReducer
+        user: userReducer,
+        movies: moviesSlice
     }
 })
 

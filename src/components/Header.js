@@ -41,7 +41,7 @@ const Header = () => {
             <img className="w-64" src={netflixlogo} alt="logo" />
             {userData && <div className="py-6">
                 <img className="w-12 h-12" src={userAvatar} alt="" />
-                <button onClick={handleSignOut}>Sign out</button>
+                <button className="text-white font-bold"onClick={handleSignOut}>Sign out</button>
             </div>}
         </div>
         
