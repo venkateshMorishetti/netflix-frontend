@@ -12,6 +12,8 @@ steps:
 included firebase to app
 deployed app to firebase and made it available
 created the redux store for user info
+registered for TMDB website for movies data and created app there and get access token..
+
 
 
  
