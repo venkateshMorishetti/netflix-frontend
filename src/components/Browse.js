@@ -18,8 +18,8 @@ const Browse = () => {
     return (
         <div>
             <Header/>
-            {gptData.gptSearchPageToggle ?<GptSearch /> : <><MainContainer />
-            <SecondaryContainer /> </>}
+            <MainContainer />
+            <SecondaryContainer />
         </div>
     )
 }
