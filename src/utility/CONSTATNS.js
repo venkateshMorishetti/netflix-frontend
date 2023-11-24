@@ -13,3 +13,23 @@ export const API_HEADERS = {
   }
 
 export const MOVIE_IMAGE_BASE_URI = 'https://image.tmdb.org/t/p/w500/';
+
+export const LANGUAGE_CONFIG = [
+  {
+    key: "en",
+    label: "English"
+  },
+  {
+    key: "hi",
+    label: "Hindi"
+  },
+  {
+    key: "ta",
+    label: "Tamil"
+  },
+  {
+    key: "te",
+    label: "Telugu"
+  }
+
+]

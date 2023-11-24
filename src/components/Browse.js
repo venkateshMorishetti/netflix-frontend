@@ -15,8 +15,6 @@ const Browse = () => {
     usePopularMovies();
     useUpcomingMovies();
     const gptData = useSelector(store=> store.gpt);
-    console.log(gptData)
-   
     return (
         <div>
             <Header/>

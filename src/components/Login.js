@@ -24,9 +24,7 @@ const Login = () => {
            if(result === null){
                 signInWithEmailAndPassword(auth,emailAddress.current.value, password.current.value)
                 .then((userCredential) => {
-                const user = userCredential.user;
-                console.log("Login Successful");
-                console.log(user)
+                    const user = userCredential.user;
                     navigate("/browse")
                 })
                 .catch((error) => {
@@ -43,8 +41,6 @@ const Login = () => {
                 createUserWithEmailAndPassword(auth,emailAddress.current.value, password.current.value)
                 .then((userCredential) => {
                     const user = userCredential.user;
-                    console.log("Sign Up Successful");
-                    console.log(user)
                     navigate("/browse")
                 })
                 .catch((error) => {
