@@ -12,11 +12,7 @@ const Body = () => {
         {
             path:"/browse",
             element:<Browse/>
-        },
-        {
-            path:"/gpt-search",
-            element:<GptSearch/>
-        },
+        }
     ])
 
     return (
