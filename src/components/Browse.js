@@ -5,6 +5,8 @@ import SecondaryContainer from './SecondaryContainer'
 import useTrendingNowMovies from "../hooks/useTrendingNowMovies";
 import usePopularMovies from "../hooks/usePopularMovies";
 import useUpcomingMovies from "../hooks/useUpcomingMovies";
+import { useSelector } from "react-redux";
+import GptSearch from "./GptSearch";
 
 const Browse = () => {
     
@@ -12,12 +14,14 @@ const Browse = () => {
     useTrendingNowMovies();
     usePopularMovies();
     useUpcomingMovies();
+    const gptData = useSelector(store=> store.gpt);
+    console.log(gptData)
    
     return (
         <div>
             <Header/>
-            <MainContainer />
-            <SecondaryContainer />
+            {gptData.gptSearchPageToggle ?<GptSearch /> : <><MainContainer />
+            <SecondaryContainer /> </>}
         </div>
     )
 }

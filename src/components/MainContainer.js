@@ -3,7 +3,7 @@ import VideoBackground from "./VideoBackground";
 import VideoTitle from "./VideoTitle";
 const MainContainer = () => {
     const nowPlayingMoviesData = useSelector(store=> store.movies?.nowPlayingMovies);
-    const mainMovie = nowPlayingMoviesData && nowPlayingMoviesData[1];
+    const mainMovie = nowPlayingMoviesData && nowPlayingMoviesData[0];
     const {original_title, overview, id} = mainMovie || {};
     return (
         <div>
