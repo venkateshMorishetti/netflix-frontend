@@ -64,18 +64,23 @@ const Header = () => {
         navigate("/browse")
     }
     return (
-        <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-20 flex ">
-            <img onClick={redirectToBrowsePage} className="w-64 pr-2 cursor-pointer" src={netflixlogo} alt="logo" />
-            { userData &&
-                COMPONENTS_CONFIG.map((component, index) => {
-                    return <button key={index} className="text-white text-2xl px-8" onClick={redirectToSelectedTab(component.routeURL)}>{component.label}</button>
-                })   
+        <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-20 ">
+            <span className="flex ">
+                <img onClick={redirectToBrowsePage} className="w-64 pr-2 cursor-pointer" src={netflixlogo} alt="logo" />
+                { userData &&
+                    COMPONENTS_CONFIG.map((component, index) => {
+                        return <button key={index} className="text-white text-2xl px-8" onClick={redirectToSelectedTab(component.routeURL)}>{component.label}</button>
+                    })   
+                }
+                
+            </span>
+            {userData && 
+                <span className="py-6 flex justify-end -mt-24">
+                    <button className="text-white text-2xl mx-8   w-52 rounded-lg font-bold bg-pink-500" onClick={redirectToGptSearchPage}>{showGptPageToggle ? LANGUAGE_STRINGS[selectedLanguage].home: "Gpt Search"}</button>
+                    <span><img className="w-12 h-12" src={userAvatar} alt="" />
+                    <button className="text-white font-bold"onClick={handleSignOut}>Sign out</button></span>
+                </span>
             }
-            {userData && <div className="py-6 flex ml-96">
-                <button className="text-white text-2xl mx-8 px-4 py-1 rounded-lg font-bold bg-pink-500" onClick={redirectToGptSearchPage}>{showGptPageToggle ? LANGUAGE_STRINGS[selectedLanguage].home: "Gpt Search"}</button>
-                <img className="w-12 h-12" src={userAvatar} alt="" />
-                <button className="text-white font-bold"onClick={handleSignOut}>Sign out</button>
-            </div>}
         </div>
         
     )
