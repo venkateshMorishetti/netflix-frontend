@@ -71,7 +71,7 @@ const Header = () => {
                     return <button key={index} className="text-white text-2xl px-8" onClick={redirectToSelectedTab(component.routeURL)}>{component.label}</button>
                 })   
             }
-            {userData && <div className="ml-64 py-6 flex">
+            {userData && <div className="py-6 flex ml-96">
                 <button className="text-white text-2xl mx-8 px-4 py-1 rounded-lg font-bold bg-pink-500" onClick={redirectToGptSearchPage}>{showGptPageToggle ? LANGUAGE_STRINGS[selectedLanguage].home: "Gpt Search"}</button>
                 <img className="w-12 h-12" src={userAvatar} alt="" />
                 <button className="text-white font-bold"onClick={handleSignOut}>Sign out</button>

@@ -2,7 +2,6 @@ import Login from "./Login";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Browse from "./Browse";
 import GptSearch from "./GptSearch";
-import Movies from "./Movies";
 import MyList from "./MyList";
 import NewsAndPopular from "./NewsAndPopular";
 import BrowseByLanguage from "./BrowseByLanguage";
@@ -18,10 +17,6 @@ const Body = () => {
         {
             path:"/browse",
             element:<Browse/>
-        },
-        {
-            path:"/movies",
-            element:<Movies/>
         },
         {
             path:"/my-list",

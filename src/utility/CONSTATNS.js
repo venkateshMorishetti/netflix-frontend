@@ -37,10 +37,6 @@ export const LANGUAGE_CONFIG = [
 
 export const COMPONENTS_CONFIG = [
   {
-    routeURL: "/movies",
-    label: "Movies"
-  },
-  {
     routeURL: "/tv-shows",
     label: "TV Shows"
   },
@@ -58,4 +54,3 @@ export const COMPONENTS_CONFIG = [
   }
 ]
 
-export const OPENAI_API_KEY = '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';
