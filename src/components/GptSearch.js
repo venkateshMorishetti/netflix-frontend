@@ -4,11 +4,11 @@ import { loginPageBackground } from "../utility/CONSTATNS";
 import Header from "./Header";
 const GptSearch = () => {
     return (
-        <div>
+        <div className="bg-stone-400 h-screen">
             <Header/>
-             <div className="absolute -z-10">
+             {/* <div className="absolute -z-10">
                 <img src={loginPageBackground} alt="netflix login background" />
-            </div>
+            </div> */}
             <GptSearchBar />
             <GptSearchResults />
         </div>

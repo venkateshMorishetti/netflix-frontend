@@ -4,6 +4,7 @@ import  userReducer  from "./userSlice";
 import gptReducer from "./gptSlice";
 import configReducer from "./configSlice";
 import tvShowsReducer from "./tvShowsSlice";
+import searchMoviesReducer from "./searchMoviesSlice";
 
 const appstore = configureStore({
     reducer:{
@@ -11,7 +12,8 @@ const appstore = configureStore({
         movies: moviesReducer,
         gpt: gptReducer,
         config:configReducer,
-        tvShows:tvShowsReducer
+        tvShows:tvShowsReducer,
+        searchMovies: searchMoviesReducer
     }
 })
 

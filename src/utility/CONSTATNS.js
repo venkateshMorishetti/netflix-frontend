@@ -34,6 +34,13 @@ export const LANGUAGE_CONFIG = [
 
 ]
 
+export const LANGUAGE_CONFIG_MAP ={
+  "en":"English",
+  "hi":"Hindi",
+  "ta":"Tamil",
+  "te":"Telugu"
+}
+
 
 export const COMPONENTS_CONFIG = [
   {
@@ -53,4 +60,6 @@ export const COMPONENTS_CONFIG = [
     label: "Browse By Language"
   }
 ]
+
+
 

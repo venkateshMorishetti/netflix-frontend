@@ -1,20 +1,31 @@
 import { useRef } from "react";
-import {LANGUAGE_CONFIG} from "../utility/CONSTATNS";
+import {LANGUAGE_CONFIG, LANGUAGE_CONFIG_MAP} from "../utility/CONSTATNS";
 import {LANGUAGE_STRINGS} from "../utility/Strings";
 import { updateSelectedLanguage } from "../utility/configSlice";
 import { useDispatch, useSelector } from "react-redux";
+import {addSearchResults} from "../utility/searchMoviesSlice";
+import { API_HEADERS } from "../utility/CONSTATNS";
+
 
 const GptSearchBar = () =>{
     const searchValue = useRef(null)
     const dispatch = useDispatch();
     const selectedLanguageKey = useSelector(store => store.config.selectedLanguage);
-    let languageKey = "en";
     const getSearchResults = () =>{
-        console.log(searchValue.current.value)
+        fetch('https://api.themoviedb.org/3/search/movie?query='+searchValue.current.value+'&include_adult=false&language=en-US&page=1', API_HEADERS)
+        .then(response => response.json())
+        .then((response) =>{ 
+            const result = {
+                searchQuery: searchValue.current.value,
+                searchResults: response
+            }
+            dispatch(addSearchResults(result));
+        })
+        .catch(err => console.error(err));
+
     }
 
     const updateLanguage=(e)=>{
-        languageKey = "te";
         dispatch(updateSelectedLanguage(e.target.value));
     }
     return (

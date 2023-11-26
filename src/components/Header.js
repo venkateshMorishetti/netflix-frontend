@@ -76,7 +76,7 @@ const Header = () => {
             </span>
             {userData && 
                 <span className="py-6 flex justify-end -mt-24">
-                    <button className="text-white text-2xl mx-8   w-52 rounded-lg font-bold bg-pink-500" onClick={redirectToGptSearchPage}>{showGptPageToggle ? LANGUAGE_STRINGS[selectedLanguage].home: "Gpt Search"}</button>
+                    <button className="text-white text-2xl mx-8   w-52 rounded-lg font-bold bg-pink-500" onClick={redirectToGptSearchPage}>{showGptPageToggle ? LANGUAGE_STRINGS[selectedLanguage].home: "Movie Search"}</button>
                     <span><img className="w-12 h-12" src={userAvatar} alt="" />
                     <button className="text-white font-bold"onClick={handleSignOut}>Sign out</button></span>
                 </span>
