@@ -2,15 +2,20 @@ import GptSearchBar from "./GptSearchBar";
 import GptSearchResults from "./GptSearchResults";
 import { loginPageBackground } from "../utility/CONSTATNS";
 import Header from "./Header";
+import { useSelector } from "react-redux";
 const GptSearch = () => {
+    const searchResults = useSelector(store => store.searchMovies);
     return (
-        <div className="bg-stone-400 h-screen">
+        <div className="">
             <Header/>
-             {/* <div className="absolute -z-10">
+             <div className="absolute -z-10">
                 <img src={loginPageBackground} alt="netflix login background" />
-            </div> */}
+            </div>
+           
             <GptSearchBar />
-            <GptSearchResults />
+           {searchResults.searchResults!=null  && <div className="">
+                <GptSearchResults />
+            </div>}
         </div>
     )
 }

@@ -47,18 +47,18 @@ export const COMPONENTS_CONFIG = [
     routeURL: "/tv-shows",
     label: "TV Shows"
   },
-  {
-    routeURL: "/news&popular",
-    label: "News & Popular"
-  },
-  {
-    routeURL: "/my-list",
-    label: "My List"
-  },
-  {
-    routeURL: "/browse-by-language",
-    label: "Browse By Language"
-  }
+  // {
+  //   routeURL: "/news&popular",
+  //   label: "News & Popular"
+  // },
+  // {
+  //   routeURL: "/my-list",
+  //   label: "My List"
+  // },
+  // {
+  //   routeURL: "/browse-by-language",
+  //   label: "Browse By Language"
+  // }
 ]
 
 
